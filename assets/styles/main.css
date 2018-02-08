@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #D7907B;
+}
+
+.wrapper {
+  position: absolute;
+  height: 700px;
+  width: 800px;
+  top: 20%;
+  left: 50%;
+  margin: -15vh 0 0 -40vw;
+  padding: 5px;
+  background-color: #DDFFD9;
+}
+
+.info {
+  text-align: center;
+  color: #D7907B;
+  padding: 2px;
+}
+
+table {
+  height: 400px;
+  width: 600px;
+  position: relative;
+  margin: 10px 0 0 100px;
+  padding: 5px;
+  background-color: #ECC8AE;
+}
+
+tbody {
+  text-align: center;
+}
+
+button.board-cell:active, button.board-cell:focus {
+  outline: none;
+}
+
+button.board-cell.default-img {
+  height: 60px;
+  width: 60px;
+  background: url('../images/apple_black_white_line_art.svg') no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+}
