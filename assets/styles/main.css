@@ -46,6 +46,22 @@ button.board-cell.default-img {
   background-size: 50px 50px;
 }
 
+button.board-cell.ambrosia {
+  height: 60px;
+  width: 60px;
+  background: url('../images/player_one_mouth.png');
+  background-position: center;
+  background-size: 50px 50px;
+}
+
+button.board-cell.jupiter {
+  height: 60px;
+  width: 60px;
+  background: url('../images/player_two_mouth.png');
+  background-position: center;
+  background-size: 50px 50px;
+}
+
 .message {
   height: 75px;
   width: 550px;
