@@ -12,7 +12,7 @@ const playerTwo = {
 
 // player related helper functions
 
-function nextPlayer(player) {
+function nextPlayer() {
   if (currentPlayer.id === 1) {
     currentPlayer = playerTwo;
   } else {
