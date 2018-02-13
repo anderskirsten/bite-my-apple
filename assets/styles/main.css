@@ -67,6 +67,10 @@ button.board-cell.jupiter {
   width: 550px;
 }
 
+.play-again {
+  background: #D7907B;
+}
+
 footer {
   position: relative;
 }

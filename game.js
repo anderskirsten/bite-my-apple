@@ -2,18 +2,22 @@ const messages = {
   currentPlayer: "The current player is: ",
   occupiedSpace: "That apple has already been bitten. Choose another, ",
   weHaveAWinner: "The winner is: ",
-  weHaveATie: "You are both very hungry. The game is a draw. ",
-  playAgain: "Play again?"
+  weHaveATie: "You are both very hungry. The game is a draw."
 }
 
 function haveWinner() {
-  if ( horizontalWin() || verticalWin() ) {
+  if ( horizontalWin() || verticalWin() || diagonalWin() ) {
     return true
   }
   return false;
 }
 
-//const playAgain = function() {}
+function playAgain() {
+  $('.play-again').show();
+  $('.play-again').click(function(e) {
+    location.reload();
+  });
+}
 
 $(document).ready(function() {
 
@@ -35,10 +39,11 @@ $(document).ready(function() {
       addPlayerIcon(currentPlayer, spaceId);
       $('.pre-msg').text(messages.currentPlayer);
 
-      // check for winner or draw after each player's turn
+      // check for winner or tie after each player's turn
       if (haveWinner()) {
         $('.board-cell').unbind('click');
         $('.pre-msg').text(messages.weHaveAWinner);
+        playAgain();
         return;
       }
 
@@ -46,6 +51,7 @@ $(document).ready(function() {
         $('#player').removeClass().addClass().empty();
         $('.board-cell').unbind('click');
         $('.pre-msg').text(messages.weHaveATie);
+        playAgain();
         return;
       }
       currentPlayer = nextPlayer();
