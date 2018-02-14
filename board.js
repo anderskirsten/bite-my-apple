@@ -47,6 +47,16 @@ const buildBoard = function (board) {
     $(spaceId + ' > button').removeClass('default-img').addClass(iconClass);
   }
 
+  // see what player occupies the space
+  function checkSpaceOccupant(y, x) {
+    let spaceId = '#' + y + '-' + x + "-coord";
+    if ($(spaceId + ' > button').hasClass(currentPlayer.name.toLowerCase())) {
+        return true;
+    } else {
+      return false;
+    }
+  }
+
   // game is a tie
   function gameIsDraw() {
     let x = 0;
@@ -59,15 +69,6 @@ const buildBoard = function (board) {
       }
     }
     return true;
-  }
-
-  function checkSpaceOccupant(y, x) {
-    let spaceId = '#' + y + '-' + x + "-coord";
-    if ($(spaceId + ' > button').hasClass(currentPlayer.name.toLowerCase())) {
-        return true;
-    } else {
-      return false;
-    }
   }
 
   // ways to win : horizontal, vertical, diagonal

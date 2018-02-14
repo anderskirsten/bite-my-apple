@@ -1,4 +1,5 @@
 body {
+  position: relative;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -8,24 +9,30 @@ body {
 
 .wrapper {
   position: absolute;
-  height: 700px;
+  height: 750px;
   width: 800px;
   top: 20%;
   left: 50%;
   margin: -15vh 0 0 -40vw;
-  padding: 5px;
+  padding: 5px 5px 0 5px;
   background-color: #DDFFD9;
 }
 
 .info {
   padding: 2px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
 }
 
 table {
-  height: 400px;
+  height: 450px;
   width: 600px;
   position: relative;
-  margin: 10px 0 0 100px;
+  margin: -30px 0 0 100px;
   padding: 5px;
   background-color: #ECC8AE;
 }
@@ -63,14 +70,39 @@ button.board-cell.jupiter {
 }
 
 .message {
-  height: 75px;
+  position: relative;
+  top: -30px;
+  margin-left: 100px;
+  height: 100px;
   width: 550px;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .play-again {
-  background: #D7907B;
+  position: relative;
+  top: 0;
+  background: none;
+}
+
+a {
+  color: #D7907B;
+  background: none;
+  outline: none;
+  text-decoration: none;
+}
+
+a:focus a:active {
+  color: #D7907B;
+  background: none;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
 }
 
 footer {
   position: relative;
+  bottom: 15px;
 }

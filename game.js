@@ -20,10 +20,9 @@ function playAgain() {
 }
 
 $(document).ready(function() {
-
   // display initial message shown
-  $('#player').removeClass().addClass("player-id-" + currentPlayer.id).text(currentPlayer.name);
   $('.pre-msg').text(messages.currentPlayer);
+  $('#player').removeClass().addClass("player-id-" + currentPlayer.id).text(currentPlayer.name);
 
   // set up event listener on all clickable board buttons
   $('.board-cell').click(function(e) {
@@ -54,6 +53,7 @@ $(document).ready(function() {
         playAgain();
         return;
       }
+      // switch to next player's turn
       currentPlayer = nextPlayer();
     }
   })
